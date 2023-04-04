@@ -1,0 +1,128 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <title>First Portfolio Bootstrap 5 Theme</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/templatemo-first-portfolio-style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/templatemo-first-portfolio-style.css">
+
+    <main>
+
+        <section class="clients section-padding">
+
+            <div class="container">
+
+                <div class="row align-items-center">
+
+                    <% for(var i=0; i<a.length; i++) {%>
+                        <div class="col-lg-2 col-4 clients-item-height">
+                            
+                            <a href=<%=a[i].srnumber%>>play</a>
+                            <a href=<%=a[i].srnumber%>><img src="<%=a[i].srnumber%>/<%=a[i].srnumber%>.jpg"
+                                    class="clients-image img-fluid" alt="" width="135" height="40"></a>
+                                    <a href="<%=a[i].srnumber%>"><img src="<%=a[i].srnumber%>/icon.jpg"
+                                        class="clients-image img-fluid" alt="" width="135" height="40"></a>
+                        </div>
+                        <br>
+                        <% } %>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+          #main {
+            margin-top: 1vh;
+            height: 32vh;
+            width: 100vw;
+        }
+
+        .first {
+            margin-left: 4%;
+            height: 32vh;
+            width: 28vw;
+            position: absolute;
+        }
+
+        .second {
+            margin-left: 36%;
+            height: 32vh;
+            width: 28vw;
+            position: absolute;
+        }
+
+        .third {
+            margin-left: 68%;
+            height: 32vh;
+            width: 28vw;
+            position: absolute;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <% for(var i=0; i<a.length/3; i++) {%>
+
+        <div id="main">
+
+            <a href="<%=(3*i)+1%>"><img class="first" src="<%=(3*i)+1%>/icon.jpg"
+                alt=""></a>
+
+            <% if((3*i)+1 < a.length){ %>
+
+                <a href="<%=(3*i)+2%>"><img class="second" src="<%=(3*i)+2%>/icon.jpg"
+                    alt=""></a>
+
+            <% } %>
+
+            <% if((3*i)+2 < a.length){ %>
+
+                <a href="<%=(3*i)+3%>"><img  class="third" src="<%=(3*i)+3%>/icon.jpg"
+                    alt=""></a>
+
+            <% } %>
+
+        </div>
+
+        <% } %>
+
+</body>
+</html>
